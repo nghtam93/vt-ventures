@@ -1,0 +1,105 @@
+.single__wrap{
+	position: relative;
+	&::before {
+	    content: '';
+	    position: absolute;
+	    top: -10%;
+	    left: 0;
+	    width: 85%;
+	    height: 90%;
+	    background: url(../img/single-bg-top.png) no-repeat;
+	    background-size: contain;
+	    background-position: top left;
+	    pointer-events: none;
+    }
+    &::after {
+	    content: '';
+	    position: absolute;
+	    top: 0%;
+	    right: 0;
+	    width: 45%;
+	    height: 90%;
+	    background: url(../img/single-bg-right.png) no-repeat;
+	    background-size: contain;
+	    background-position: top right;
+	    pointer-events: none;
+    }
+
+}
+.single__header{
+	position: relative;
+    margin-top: var(--header-height);
+    padding: 30px 0 60px;
+}
+.single-content{
+	max-width: 790px;
+	margin: 0 auto 100px;
+
+	.el__header{
+		margin-bottom: 60px;
+	}
+	h1{
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 60px;
+		text-align: center;
+		color: #FFFFFF;
+		margin-bottom: 15px;
+	}
+	.single__date{
+		font-size: 14px;
+		line-height: 17px;
+		color: #9A9A9A;
+		text-align: center;
+	}
+	img{
+		margin-bottom: 50px;
+	}
+}
+
+/*
+======================================
+[ Editor Style ]
+======================================
+*/
+.entry-content h2, .entry-content h3, .entry-content h4{
+	margin-bottom: 1rem;
+}
+.entry-content h2{
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+}
+.entry-content p{margin-bottom:40px;}
+.entry-content .aligncenter{display:block;margin-left:auto;margin-right:auto;}
+.entry-content img,.entry-content figure.wp-caption{max-width:100%;height:auto}
+.entry-content address p,.entry-content address p{margin-bottom:5px;}
+.entry-content a{color:black;text-decoration:underline;font-weight:500;}
+.entry-content figcaption{width:100%;text-align:center;}
+.entry-content img.alignright{float:right;margin:0 0 1em 1em}
+.entry-content img.alignleft{float:left;margin:0 1em 1em 0}
+.entry-content img.aligncenter{display:block;margin-left:auto;margin-right:auto}
+.entry-content ul{list-style-type:disc;padding-left:15px;margin-bottom:10px;}
+.entry-content:after{content:'';clear:both;display:table;}
+table{width:100%;margin-bottom:1rem;}
+table td,table th{border:1px solid #737476;}
+table td,table th{padding:.75rem;vertical-align:top;border-top:1px solid #737476;}
+
+@media (max-width: 767px){
+	.single__header{
+		padding-bottom: 40px;
+	}
+	.single-content h1{
+		font-size: 20px;
+		line-height: 30px;
+		text-align: left;
+	}
+	.single-content .single__date{
+		text-align: left;
+	}
+	.single-content .el__header{
+		margin-bottom: 30px;
+	}
+}
+
+
