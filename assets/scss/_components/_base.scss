@@ -80,7 +80,19 @@ strong{
 
 .slickfix .slick-list{margin:0 -50px;}
 .slickfix .slick-slide{margin:0 50px;}
-
+.slick-arrow{
+    background:#06a964;
+    color: #fff;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    &.slick-disabled{
+        opacity: .6;
+    }
+}
 
 /**/
 .dnfix__thumb{position:relative;height:auto;width:100%;overflow:hidden;display:block;padding-top:68.075%;}

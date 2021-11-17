@@ -7,7 +7,6 @@
     span{margin-left:7px;}
     font-weight: bold;
 
-
     .languages-item{
         position:relative;
         left:0px;top:0px;
@@ -58,8 +57,11 @@
     &__excerpt{
         color: #fff;
     }
-    @media (max-width: 991px){
-
+    @media (max-width: 575px){
+        margin: 0 auto 30px;
+        &__excerpt{
+            font-size: 14px;
+        }
     }
 
 }
@@ -82,7 +84,25 @@
 }
 
 .page__header{
-
+    padding: 165px 0 85px;
+    background: url(../img/header-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    h1{
+        font-weight: bold;
+        font-size: 60px;
+        color:#fff;
+    }
+    @media (max-width: 991px){
+        h1 {
+            font-size: 46px;
+        }
+    }
+    @media (max-width: 575px){
+        h1 {
+            font-size: 34px;
+        }
+    }
 }
 .archive__content{
 

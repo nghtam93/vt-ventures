@@ -4,6 +4,17 @@
 ======================================
 */
 $font-color: #fff;
+
+.-ic-diamond::before {
+    content: '';
+    position: absolute;
+    top: 36px;
+    left: 0;
+    background: url(../img/ic-diamond.png) no-repeat;
+    background-size: contain;
+    width: 13px;
+    height: 10px;
+}
 .main__nav{
     position:relative;
     z-index:9;
@@ -63,7 +74,7 @@ $font-color: #fff;
                     height:2px;
                     transition:all .3s;
                     margin:auto;
-                    background: #FFB901;
+                    background: #059b53;
                     border-radius: 5px;
                 }
             }
@@ -143,6 +154,9 @@ $font-color: #fff;
         position: relative;
         top: 2px;
         cursor: pointer;
+        width: 25px;
+        height: 35px;
+        text-align: right;
     }
     &__header{
         display: flex;

@@ -57,6 +57,22 @@ $(document).ready(function(){
 
         new WOW().init();
 
+        $('.home-work__slider').slick({
+             infinite: false,
+             slidesToShow: 1,
+             slidesToScroll: 1,
+             autoplay: false,
+             mobileFirst: true,
+             prevArrow: '<span class="icon-arrow-left slick-prev slick-arrow"></span>',
+            nextArrow: '<span class="icon-arrow-right slick-next slick-arrow"></span>',
+             responsive: [
+                {
+                   breakpoint: 767,
+                   settings: "unslick"
+                }
+             ]
+          });
+
         $('.home-service__slider').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -66,12 +82,12 @@ $(document).ready(function(){
             nextArrow: '<span class="icon-arrow-right slick-next slick-arrow"></span>',
             responsive: [
                 {
-                  breakpoint: 768,
+                  breakpoint: 991,
                   settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     dots: true,
-                    arrows: true
+                    arrows: false
                   }
                 },
                 {
@@ -80,7 +96,7 @@ $(document).ready(function(){
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     dots: true,
-                    arrows: true
+                    arrows: false
                   }
                 }
             ]

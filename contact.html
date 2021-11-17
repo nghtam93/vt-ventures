@@ -16,14 +16,6 @@
 
     <header class="header -fix">
         <div class="container d-flex align-items-center">
-          <div class="d-lg-none me-3">
-              <a href="#" class="menu-mb__btn">
-                <span class="iconz-bar"></span>
-                <span class="iconz-bar"></span>
-                <span class="iconz-bar"></span>
-              </a>
-          </div>
-
           <h1 class="logo">
             <a href="index.html">
               <img src="images/logo.png" alt="Logo">
@@ -31,7 +23,7 @@
           </h1>
           <nav class="main__nav ms-auto d-none d-lg-block">
             <ul class="el__menu">
-              <li class="menu-item"><a href="#home-about">About Us</a></li>
+              <li class="menu-item -ic-diamond"><a href="#home-about">About Us</a></li>
               <li class="menu-item"><a href="#home-services">Services</a></li>
               <li class="menu-item"><a href="#home-team">Team</a></li>
               <li class="menu-item"><a href="#home-work">Works</a></li>
@@ -41,38 +33,56 @@
             </ul>
           </nav>
 
+          <div class="languages">
+            <div class="languages-item">EN</div>
+            <ul class="">
+              <li class="active">EN</li>
+              <li>VN</li>
+            </ul>
+          </div>
+
+          <div class="menu-mb__btn ms-3">
+            <img src="assets/img/bugger.png" alt="">
+          </div>
+
         </div>
     </header>
 
-    <section class="page__header">
+    <section class="page__header text-center">
       <div class="container">
-        <h1 class="entry-title">LIÊN HỆ</h1>
+        <h1 class="entry-title">Contact Us</h1>
       </div>
     </section>
 
     <div class="page__contact">
       <div class="container">
         <form action="" method="post" class="wpcf7-form init">
-          <div class="wpcf7-form__title">ĐỂ LẠI LỜI NHẮN</div>
-            <div>
-              <span class="wpcf7-form-control-wrap">
-              <input type="text" name="your-name" class="form-control" placeholder="Tên"></span>
-            </div>
-            <div>
-              <span class="wpcf7-form-control-wrap">
-              <input type="email" name="your-email" class="form-control" placeholder="Email"></span>
-            </div>
-            <div>
-              <span class="wpcf7-form-control-wrap">
-              <input type="text" name="your-phone" class="form-control" placeholder="Số điện thoại"></span>
-            </div>
-            <div>
-              <span class="wpcf7-form-control-wrap">
-              <textarea name="your-message" cols="40" rows="3" class="form-control" placeholder="Lời nhắn"></textarea></span>
-            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="mb-2">Your Name</p>
+                <span class="wpcf7-form-control-wrap">
+                <input type="text" name="your-name" class="form-control form-control-lg" placeholder="Enter Your Name"></span>
+              </div>
+              <div class="col-md-6">
+                <p class="mb-2">Your Phone Number</p>
+                <span class="wpcf7-form-control-wrap">
+                <input type="text" name="your-phone" class="form-control form-control-lg" placeholder="Your Phone Number"></span>
+              </div>
+              <div class="col-md-6">
+                <p class="mb-2">Email</p>
+                <span class="wpcf7-form-control-wrap">
+                <input type="email" name="your-email" class="form-control form-control-lg" placeholder="Email"></span>
+              </div>
 
-            <div class="text-end">
-              <input type="submit" value="Gửi" class="wpcf7-submit">
+              <div class="col-md-12">
+                <p class="mb-2">Your Message</p>
+                <span class="wpcf7-form-control-wrap">
+                <textarea name="your-message" cols="40" rows="3" class="form-control form-control-lg" placeholder="Your Message"></textarea></span>
+              </div>
+
+              <div class="col-md-12 text-end">
+                <input type="submit" value="SUBMIT MESSAGE" class="wpcf7-submit">
+              </div>
             </div>
         </form>
       </div>
@@ -81,14 +91,14 @@
     <footer class="footer">
       <div class="container text-center position-relative">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-12">
             <div class="footer__logo">
               <a href="index.html">
                 <img src="images/logo.png" alt="Logo">
               </a>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-6 col-md-12">
 
             <ul class="footer__list">
               <li><a href="">About Us</a></li>
@@ -99,32 +109,43 @@
               <p>© Copyright 2021 AT Ventures.</p>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="footer__text mb-3">
-              <p class="-text">Keep In Touch</p>
-              <p><a href="mailto:contact@tagventures.fund">contact@tagventures.fund</a></p>
+          <div class="col-lg-3 col-md-12">
+            <div class="text-center text-lg-start">
+              <div class="footer__text mb-3">
+                <p class="-text">Keep In Touch</p>
+                <p><a href="mailto:contact@tagventures.fund">contact@tagventures.fund</a></p>
+              </div>
+              <ul class="footer__socical">
+                <li><a href="" target="_blank"><span class="icon-facebook"></span></a></li>
+                <li><a href="" target="_blank"><span class="icon-twitter"></span></a></li>
+                <li><a href="" target="_blank"><span class="icon-telegram"></span></a></li>
+                <li><a href="" target="_blank"><span class="icon-linkin"></span></a></li>
+              </ul>
             </div>
-            <ul class="footer__socical">
-              <li><a href="" target="_blank"><span class="icon-facebook"></span></a></li>
-              <li><a href="" target="_blank"><span class="icon-twitter"></span></a></li>
-              <li><a href="" target="_blank"><span class="icon-telegram"></span></a></li>
-              <li><a href="" target="_blank"><span class="icon-linkin"></span></a></li>
-            </ul>
           </div>
         </div>
       </div>
     </footer>
 
     <nav id="menu__mobile" class="nav__mobile">
+        <div class="nav__mobile__header">
+
+          <a href="index.html">
+            <img src="images/logo.png" alt="Logo">
+          </a>
+
+          <div class="nav__mobile--close ms-auto"><span class="icon-close"></span></div>
+
+        </div>
         <div class="nav__mobile__content">
-            <ul class="nav__mobile--ul">
-              <li class="menu-item"><a href="#home-about">About Us</a></li>
-              <li class="menu-item"><a href="#home-services">Services</a></li>
-              <li class="menu-item"><a href="#home-team">Team</a></li>
-              <li class="menu-item"><a href="#home-work">Works</a></li>
-              <li class="menu-item active"><a href="contact.html">Contact Us</a></li>
-              <li class="menu-item"><a href="#home-partners">Partners</a></li>
-            </ul>
+          <ul class="nav__mobile--ul">
+            <li class="menu-item"><a href="#home-about">About Us</a></li>
+            <li class="menu-item"><a href="#home-services">Services</a></li>
+            <li class="menu-item"><a href="#home-team">Team</a></li>
+            <li class="menu-item"><a href="#home-work">Works</a></li>
+            <li class="menu-item active"><a href="contact.html">Contact Us</a></li>
+            <li class="menu-item"><a href="#home-partners">Partners</a></li>
+          </ul>
         </div>
     </nav>
 
