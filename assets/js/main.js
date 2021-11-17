@@ -1,5 +1,22 @@
 $(document).ready(function(){
 
+    /*----Languages---*/
+    $('.languages .languages-item').click(function() {
+        $(this).next().toggleClass('dropdown-languages');
+        isClicked = true;
+    });
+
+    $('.languages ul li').click(function() {
+        var $liIndex = $(this).index() + 1;
+        $('.languages ul li').removeClass('active');
+        $('.languages ul li:nth-child('+$liIndex+')').addClass('active');
+        var $getLang = $(this).html();
+        $('.languages .languages-item').html($getLang);
+
+        $('.languages>ul').removeClass('dropdown-languages')
+    });
+
+
     var header_sticky=$("header.-fix")
     if($('body').hasClass( "home" )){
         $(window).scroll(function(){
@@ -8,33 +25,6 @@ $(document).ready(function(){
     }else{
         header_sticky.addClass("is-active")
     }
-
-    //-------------------------------------------------
-    // Header Search
-    //-------------------------------------------------
-    var $headerSearch = $('.header__search');
-    var $headerSearchToggle = $('.search-submit');
-
-
-    $headerSearchToggle.click(function(e){
-        if($(".search-field").val().length == 0){
-          e.preventDefault();
-          e.stopPropagation()
-        }
-    })
-
-    $headerSearchToggle.on('click', function(e) {
-
-        var $this = $(this);
-        var $header = $(this).closest('header');
-        var $this_parent = $(this).closest('form');
-        if(!$header.hasClass('open-search')) {
-            $header.addClass('open-search');
-
-        } else {
-            $header.removeClass('open-search');
-        }
-    });
 
     //-------------------------------------------------
     // Menu

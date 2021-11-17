@@ -28,62 +28,9 @@
 		}
 	}
 
-	.header__search{
-	    position: relative;
-	    margin-left:25px;
-	    font-size:20px;
-	    font-weight:400;
-	    button{
-	        position: relative;
-	        border: 0;
-	        background:transparent;
-	        line-height: 34px;
-	        outline: none;
-	        color: #05D9A3;
-	    }
-	    .search-field {
-	        position: absolute;
-	        top: 0;
-	        right: 0;
-	        width: 0px;
-	        height: 100%;
-	        padding: 0 20px;
-	        outline: none;
-	        font-family: Montserrat;
-	        font-weight: normal;
-	        font-size: 14px;
-	        line-height: 17px;
-	        color: #8E8E8E;
-	        border: 0;
-	        transition: width 0.8s ease;
-	        opacity: 0;
-	        box-shadow: none;
-	        border-right: 1px solid #636363;
-	        border-radius: 0;
-	        &:focus{
-	            outline: none;
-	        }
-	    }
-	}
-	&.open-search{
-	    background: #171C20;
-	    .main__nav {
-	        opacity: 0;
-	        z-index: -1;
-	    }
-	    .search-field{
-	        width: 350px;
-	        right: 50px;
-	        opacity: 1;
-	        background: transparent;
-	    }
-	}
-
 	@media (max-width: 991px){
 		padding: 18px 0 19px;
-		.header__search{
-			margin-left: auto;
-		}
+
 		.logo {
 		    flex-grow: 1;
 		    text-align: center;
@@ -91,18 +38,10 @@
 		    	max-height: 40px;
 		    }
 		}
-		&.open-search{
-			.logo{
-				opacity: 0;
-			}
-		}
 	}
+
 	@media (max-width: 575px){
-		&.open-search{
-			.search-field {
-			    width: 220px;
-			}
-		}
+
 	}
 }
 @keyframes stuckMoveDown{

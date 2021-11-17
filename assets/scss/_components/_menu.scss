@@ -7,7 +7,6 @@ $font-color: #fff;
 .main__nav{
     position:relative;
     z-index:9;
-    font-family: Montserrat;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
@@ -39,7 +38,7 @@ $font-color: #fff;
             padding: 0 10px;
             &.menu-item-has-children{
                 &>a:after {
-                    content: "\e907";
+                    content: "\e906";
                     font-family: 'icomoon';
                     font-size: 5px;
                     margin-left: 5px;
@@ -128,60 +127,67 @@ $font-color: #fff;
 .nav__mobile{
     display:block;
     position:fixed;
-    top:var(--header-height);
+    top:0;
     height:100%;
-    left:-414px;
-    width:414px;
+    right:-420px;
+    width:400px;
     opacity:0;
-    background:#17181D;
+    background:#06A964;
     transition:all .25s;
-    z-index:999;
-    font-size: 16px;
-    font-weight: 400;
+    z-index:9999;
+    font-weight: 600;
+    font-size: 14px;
     pointer-events: none;
     overflow: auto;
     &--close {
         position: relative;
         top: 2px;
+        cursor: pointer;
     }
     &__header{
         display: flex;
         align-items: center;
-        margin-bottom: 50px;
-        &>img{
-            max-height: 37px;
+        padding: 20px 50px;
+        color: #fff;
+        img{
+            max-height: 50px;
         }
     }
     &__content{
         position: relative;
         overflow-y:auto;
-        padding: 24px 0;
-        height: calc(100% - var(--header-height));
+        padding: 20px 0;
     }
     &.active{
-        left:0;
+        right:0;
         opacity:1;
         pointer-events: auto;
     }
     .nav__mobile--ul{
         list-style:none;
-        padding:5px 0;
-        margin:0 0 20px;
         li{
             position:relative;
             margin-bottom: 10px;
             a{
-                font-family: Montserrat;
+                position: relative;
                 font-weight: 600;
-                font-size: 20px;
+                font-size: 18px;
                 line-height: 24px;
-                text-align: center;
                 color: #FFFFFF;
-                padding: 15px 50px 15px 24px;
+                padding: 15px 50px;
                 display: block;
-                text-transform: uppercase;
                 border-bottom: 1px solid transparent;
                 transition: all .5s;
+                &:before{
+                    content: '';
+                    position:absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background-color: #fff;
+                    transition: all .5s;
+                }
                 &:hover{
                     color:$color_primary;
                 }
@@ -189,54 +195,61 @@ $font-color: #fff;
             &.active, &.current-menu-item, &.current_page_item, &:hover{
                 &>a{
                     color: #fff;
-                    border-color: #FFB901;
+                    &:before{
+                        width: 100%;
+                    }
                 }
             }
         }
     }
-
-    .footer__socical {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    @media ( max-width: 575px ) {
+    @media (max-width: 575px){
         width: 100%;
+        .nav__mobile--ul{
+            li{
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
     }
 }
 /**/
 
+.menu-mb__btn{
+    position: relative;
+    top: 3px;
+    display: block;
+    cursor: pointer;
+}
 
 /**/
-.menu-mb__btn{
-    display: block;
-    width: 24px;
-    height: 24px;
-    padding:4px 0;
-}
-.menu-mb__btn .iconz-bar{
-    width:20px;
-    transition:all 0.2s;
-    background-color:white;
-    display:block;
-    height:2px;
-}
-.menu-mb__btn .iconz-bar+.iconz-bar{margin-top:5px;}
-.menu-mb__btn .iconz-bar:nth-of-type(2){
-    width: 12px;
-}
-.menu-mb__btn.active .iconz-bar:nth-of-type(1){
-    -ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);transform:rotate(45deg);
-    -ms-transform-origin:0 0;-webkit-transform-origin:0 0;transform-origin:0 0;
-}
-.menu-mb__btn .iconz-bar:nth-of-type(1){
-    -ms-transform:rotate(0);-webkit-transform:rotate(0);-moz-transform:rotate(0);transform:rotate(0);
-}
-.menu-mb__btn.active .iconz-bar:nth-of-type(2){opacity:0;
-}
-.menu-mb__btn.active .iconz-bar:nth-of-type(3){-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg);-ms-transform-origin:0;-webkit-transform-origin:0;transform-origin:0;}
-.menu-mb__btn.iconz-bar:nth-of-type(3){
-    -ms-transform:rotate(0);-webkit-transform:rotate(0);-moz-transform:rotate(0);transform:rotate(0);
-}
+// .menu-mb__btn{
+//     display: block;
+//     width: 24px;
+//     height: 24px;
+//     padding:4px 0;
+// }
+// .menu-mb__btn .iconz-bar{
+//     width:20px;
+//     transition:all 0.2s;
+//     background-color:white;
+//     display:block;
+//     height:2px;
+// }
+// .menu-mb__btn .iconz-bar+.iconz-bar{margin-top:5px;}
+// .menu-mb__btn .iconz-bar:nth-of-type(2){
+//     width: 12px;
+// }
+// .menu-mb__btn.active .iconz-bar:nth-of-type(1){
+//     -ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);transform:rotate(45deg);
+//     -ms-transform-origin:0 0;-webkit-transform-origin:0 0;transform-origin:0 0;
+// }
+// .menu-mb__btn .iconz-bar:nth-of-type(1){
+//     -ms-transform:rotate(0);-webkit-transform:rotate(0);-moz-transform:rotate(0);transform:rotate(0);
+// }
+// .menu-mb__btn.active .iconz-bar:nth-of-type(2){opacity:0;
+// }
+// .menu-mb__btn.active .iconz-bar:nth-of-type(3){-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg);-ms-transform-origin:0;-webkit-transform-origin:0;transform-origin:0;}
+// .menu-mb__btn.iconz-bar:nth-of-type(3){
+//     -ms-transform:rotate(0);-webkit-transform:rotate(0);-moz-transform:rotate(0);transform:rotate(0);
+// }
