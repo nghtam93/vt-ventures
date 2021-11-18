@@ -124,6 +124,9 @@ $font-color: #fff;
 
     }
     @media ( max-width: 1199px ) {
+        .el__menu > li > a {
+            padding: 30px 5px;
+        }
 
     }
     @media ( max-width: 991px ) {

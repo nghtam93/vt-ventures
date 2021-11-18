@@ -1,44 +1,93 @@
+.archive__content{
+	padding-bottom: 90px;
+	.nav__list{
+		height: 42px;
+		overflow: auto;
+		margin-bottom: 16px;
+		display: flex;
+		flex-wrap: nowrap;
+
+		&::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.3);background-color:#F5F5F5;}
+		&::-webkit-scrollbar{width:4px;height:6px;background-color:#06A95B;}
+		&::-webkit-scrollbar-thumb{background-color:#06A95B;}
+
+		li{
+			flex: 0 0 auto;
+			margin-bottom: 16px;
+			&:not(:last-child){
+				margin-right: 24px;
+			}
+		}
+		a{
+			display: block;
+			font-weight: bold;
+			font-size: 17.5px;
+			color: #fff;
+			transition: all .5s;
+			white-space: normal;
+			&:hover{
+				color: #06A95B;
+			}
+		}
+	}
+	.list__item{
+		&__title{
+			position: relative;
+			font-weight: bold;
+			font-size: 22px;
+			color: #fff;
+			padding-bottom: 16px;
+			&:after{
+				content: "";
+				display: block;
+				width: 30px;
+				height: 2px;
+				margin: 16px 0;
+				background: #06A95B;
+			}
+		}
+		li{
+			position: relative;
+			margin-bottom: 24px;
+			padding-left: 25px;
+			&:before{
+				content: "\e90b";
+				font-family: 'icomoon';
+				font-size: 20px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 10px;
+				height: 10px;
+				color: #06A95B;
+			}
+		}
+		a{
+			font-weight: bold;
+			font-size: 17.5px;
+			color: #FFFFFF;
+			transition: all .5s;
+			&:hover{
+				color: #06A95B;
+			}
+		}
+	}
+	@media (max-width: 991px){
+		.archive__featured{
+			padding-bottom: 50px;
+		}
+	}
+}
 .single__wrap{
 	position: relative;
-	&::before {
-	    content: '';
-	    position: absolute;
-	    top: -10%;
-	    left: 0;
-	    width: 85%;
-	    height: 90%;
-	    background: url(../img/single-bg-top.png) no-repeat;
-	    background-size: contain;
-	    background-position: top left;
-	    pointer-events: none;
-    }
-    &::after {
-	    content: '';
-	    position: absolute;
-	    top: 0%;
-	    right: 0;
-	    width: 45%;
-	    height: 90%;
-	    background: url(../img/single-bg-right.png) no-repeat;
-	    background-size: contain;
-	    background-position: top right;
-	    pointer-events: none;
-    }
 
 }
 .single__header{
 	position: relative;
     margin-top: var(--header-height);
-    padding: 30px 0 60px;
-}
-.single-content{
-	max-width: 790px;
-	margin: 0 auto 100px;
+    padding: 110px 0 60px;
 
-	.el__header{
-		margin-bottom: 60px;
-	}
-	h1{
+    h1{
 		font-weight: 600;
 		font-size: 30px;
 		line-height: 60px;
@@ -52,6 +101,16 @@
 		color: #9A9A9A;
 		text-align: center;
 	}
+
+}
+.single-content{
+	max-width: 790px;
+	margin: 0 auto 100px;
+
+	.el__header{
+		margin-bottom: 60px;
+	}
+
 	img{
 		margin-bottom: 50px;
 	}
