@@ -86,33 +86,72 @@
 	position: relative;
     margin-top: var(--header-height);
     padding: 110px 0 60px;
-
+    margin-bottom: 48px;
     h1{
+    	max-width: 600px;
 		font-weight: 600;
-		font-size: 30px;
-		line-height: 60px;
+		font-size: 34px;
+		line-height: 1.6;
 		text-align: center;
 		color: #FFFFFF;
-		margin-bottom: 15px;
+		margin: 0 auto 30px;
+	}
+	.single__tax{
+		display: inline-block;
+        a{
+        	display: inline-block;
+        	padding: 4px 15px;
+	        background: #06A95B;
+	        color: #fff;
+	        border-radius: 4px;
+	        font-weight: bold;
+	        font-size: 16px;
+	        margin-right: 16px;
+        }
 	}
 	.single__date{
+		display: inline-block;
 		font-size: 14px;
 		line-height: 17px;
 		color: #9A9A9A;
 		text-align: center;
+		&:before{
+           content: "\e90a";
+           font-family: 'icomoon';
+           display: inline-block;
+           position: relative;
+           top: 1px;
+           margin-right: 5px;
+        }
 	}
-
+	.single__featured{
+		margin-top: 48px;
+		img{
+			border-radius: 5px;
+		}
+	}
 }
 .single-content{
-	max-width: 790px;
+	max-width: 600px;
 	margin: 0 auto 100px;
-
-	.el__header{
-		margin-bottom: 60px;
-	}
 
 	img{
 		margin-bottom: 50px;
+	}
+}
+.single__tag{
+	margin-bottom: 60px;
+	a{
+		display: inline-block;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-size: 14px;
+		padding: 4px 10px;
+		color: #FFFFFF;
+		background: #151E17;
+		&:not(:last-child){
+			margin-right: 8px;
+		}
 	}
 }
 
@@ -129,11 +168,12 @@
 	font-size: 18px;
 	line-height: 24px;
 }
-.entry-content p{margin-bottom:40px;}
+
+.entry-content p{margin-bottom:20px;}
 .entry-content .aligncenter{display:block;margin-left:auto;margin-right:auto;}
 .entry-content img,.entry-content figure.wp-caption{max-width:100%;height:auto}
 .entry-content address p,.entry-content address p{margin-bottom:5px;}
-.entry-content a{color:black;text-decoration:underline;font-weight:500;}
+.entry-content a{color:#06A95B;font-weight:500;}
 .entry-content figcaption{width:100%;text-align:center;}
 .entry-content img.alignright{float:right;margin:0 0 1em 1em}
 .entry-content img.alignleft{float:left;margin:0 1em 1em 0}
@@ -144,21 +184,14 @@ table{width:100%;margin-bottom:1rem;}
 table td,table th{border:1px solid #737476;}
 table td,table th{padding:.75rem;vertical-align:top;border-top:1px solid #737476;}
 
-@media (max-width: 767px){
-	.single__header{
-		padding-bottom: 40px;
-	}
-	.single-content h1{
-		font-size: 20px;
-		line-height: 30px;
-		text-align: left;
-	}
-	.single-content .single__date{
-		text-align: left;
-	}
-	.single-content .el__header{
-		margin-bottom: 30px;
-	}
+.entry-content blockquote{
+	background: #151E17;
+padding: 48px 48px;
+box-shadow: inset 4px 0px 0px #06A964;
+border-radius: 3px;
+
+font-weight: bold;
+font-size: 18px;
+color: #B5BAB7;
+margin-bottom: 20px;
 }
-
-
