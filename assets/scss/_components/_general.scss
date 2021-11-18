@@ -204,7 +204,7 @@
         }
     }
 
-    @media (max-width:1299px){
+    @media (max-width:767px){
         margin-bottom: 20px;
         &__wrap{
             display: flex;
@@ -220,7 +220,6 @@
         &__title{
             font-size: 14px;
             height: auto;
-                -webkit-line-clamp: 3!important;
                 margin-bottom: 0;
         }
         &__excerpt{

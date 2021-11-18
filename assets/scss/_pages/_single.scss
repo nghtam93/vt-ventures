@@ -82,11 +82,64 @@
 	position: relative;
 
 }
+.single__share{
+	position: absolute;
+	top: 0;
+	left: 0.75rem;
+	color: #fff;
+	font-weight: 700;
+	transition: all .5s;
+	p{
+		margin-bottom: 16px;
+	}
+	a{
+		display: block;
+		width: 32px;
+		height: 32px;
+		line-height:32px;
+		margin: 0 auto 8px;
+		color: #fff;
+		border-radius: 50%;
+		text-align: center;
+		background: #3473EC;
+		transition: all .5s;
+		&.-tw{
+			background: #409CEA
+		}
+		&.-tele{
+			background: #2973AF
+		}
+		&:hover{
+			transform: scale(1.1);
+		}
+	}
+	@media (min-width: 992px){
+		&.is-active{
+			position: fixed;
+			left: auto;
+			top: calc(var(--header-height) + 30px);
+		}
+	}
+}
 .single__header{
 	position: relative;
     margin-top: var(--header-height);
-    padding: 110px 0 60px;
-    margin-bottom: 48px;
+    padding: 110px 0 50px;
+    &:before{
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 85%;
+	    background: url(../img/single-header.png) no-repeat;
+	    background-size: contain;
+	    background-position: 0 -50px;
+	    pointer-events: none;
+    }
+    .container{
+    	position: relative;
+    }
     h1{
     	max-width: 600px;
 		font-weight: 600;
@@ -132,11 +185,13 @@
 	}
 }
 .single-content{
-	max-width: 600px;
+	position: relative;
+	max-width: 800px;
 	margin: 0 auto 100px;
-
-	img{
-		margin-bottom: 50px;
+	&__wrapper{
+		.container{
+			position: relative;
+		}
 	}
 }
 .single__tag{
@@ -154,6 +209,60 @@
 		}
 	}
 }
+.related__post{
+	.el__header{
+		&__title{
+			position: relative;
+	        display: inline-block;
+	        font-weight: bold;
+	        font-size: 22px;
+	        color: #FFFFFF;
+	        margin-bottom: 16px;
+	        &::after {
+	            content: '';
+	            position: relative;
+	            display: block;
+	            width: 30px;
+	            height: 2px;
+	            background:#06A95B;
+	            margin: 16px 0;
+	        }
+		}
+	}
+}
+
+@media (max-width:767px){
+	.single__header{
+		padding: 50px 0 30px;
+		&:before {
+		    background-position: 0 0;
+		}
+		h1 {
+		    margin: 0 auto 15px;
+		}
+		.single__featured {
+		    margin-top: 30px;
+		}
+	}
+	.single__share{
+		position: relative;
+		left: 0;
+		&>p, &>a{
+			display: inline-block;
+		}
+		&>p{
+			margin-right: 10px;
+		}
+		&>a{
+			margin-right: 10px;
+		}
+
+	}
+	.entry-content blockquote {
+	    padding: 48px 32px;
+	}
+
+}
 
 /*
 ======================================
@@ -167,6 +276,9 @@
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 24px;
+}
+.entry-content img{
+	margin-bottom: 20px;
 }
 
 .entry-content p{margin-bottom:20px;}

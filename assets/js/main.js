@@ -56,7 +56,6 @@ $(document).ready(function(){
     if($('body').hasClass( "home" )){
 
         new WOW().init();
-
         $('.home-work__slider').slick({
              infinite: false,
              slidesToShow: 1,
@@ -102,7 +101,16 @@ $(document).ready(function(){
             ]
         });
     }
+    if($('body').hasClass( "single" )){
+        var single_share = $('.single__share')
+        var share_offset = $('.single__share').offset().top
 
+        $(window).scroll(function(){
+            $(this).scrollTop()>share_offset?single_share.addClass("is-active"):single_share.removeClass("is-active")
+        })
+
+        console.log(single_share)
+    }
 
 });
 
