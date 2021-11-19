@@ -206,17 +206,24 @@
 
     @media (max-width:767px){
         margin-bottom: 20px;
-        &__wrap{
-            display: flex;
+        &.-s1{
+            .new__item{
+                &__wrap{
+                    display: flex;
+                }
+                &__thumb{
+                    flex: 0 0 auto;
+                    width: 100px;
+                    margin-right: 10px;
+                }
+                &__meta{
+                    flex-grow: 1;
+                }
+            }
         }
-        &__thumb{
-            flex: 0 0 auto;
-            width: 100px;
-            margin-right: 10px;
-        }
-        &__meta{
-            flex-grow: 1;
-        }
+
+
+
         &__title{
             font-size: 14px;
             height: auto;

@@ -835,13 +835,13 @@ br.tb {
   @media (max-width: 767px) {
     .new__item {
       margin-bottom: 20px; }
-      .new__item__wrap {
+      .new__item.-s1 .new__item__wrap {
         display: flex; }
-      .new__item__thumb {
+      .new__item.-s1 .new__item__thumb {
         flex: 0 0 auto;
         width: 100px;
         margin-right: 10px; }
-      .new__item__meta {
+      .new__item.-s1 .new__item__meta {
         flex-grow: 1; }
       .new__item__title {
         font-size: 14px;
