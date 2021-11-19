@@ -303,6 +303,10 @@
     &-partner{
         padding: 60px 0;
         color: #fff;
+        .container{
+            position: relative;
+            z-index: 1;
+        }
         .el{
             &__header{
                 margin-bottom: 50px;
@@ -320,13 +324,14 @@
             }
             &__item{
                 display: inline-block;
-                padding: 8px 16px;
-                height: 32px;
-                background: #fff;
                 margin-bottom: 10px;
                 margin-right: 5px;
                 &__thumb{
                     display: flex;
+                    justify-content: center;
+                    padding: 8px 16px;
+                    height: 32px;
+                    background: #fff;
                     img{
                         max-height: 16px;
                     }
@@ -506,6 +511,30 @@
             .el__header {
                 margin-bottom: 24px;
             }
+            .el__items{
+                --bs-gutter-x: .75rem;
+                --bs-gutter-y: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: calc(var(--bs-gutter-y) * -1);
+                margin-right: calc(var(--bs-gutter-x) * -.5);
+                margin-left: calc(var(--bs-gutter-x) * -.5);
+                > * {
+                    flex-shrink: 0;
+                    width: 100%;
+                    max-width: 100%;
+                    padding-right: calc(var(--bs-gutter-x) * .5);
+                    padding-left: calc(var(--bs-gutter-x) * .5);
+                    margin-top: var(--bs-gutter-y);
+                }
+            }
+            .el__item {
+                flex: 0 0 auto;
+                width: 33.333333%;
+                margin-right: 0;
+            }
+
         }
     }
     @media (max-width: 375px){
