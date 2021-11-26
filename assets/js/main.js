@@ -13,7 +13,7 @@ $(document).ready(function(){
         var $getLang = $(this).html();
         $('.languages .languages-item').html($getLang);
 
-        $('.languages>ul').removeClass('dropdown-languages')
+        $('.languages>.wpml-ls').removeClass('dropdown-languages')
     });
 
 

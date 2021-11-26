@@ -134,6 +134,9 @@ $font-color: #fff;
     }
 
 }
+.home .main__nav .el__menu .current-menu-item>a:before, .main__nav .el__menu .current_page_item>a:before{
+    width: 0;
+}
 
 /*Menu custom*/
 .modal-open{overflow:hidden;}

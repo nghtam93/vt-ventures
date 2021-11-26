@@ -1,0 +1,40 @@
+.page__contact{
+	position: relative;
+	padding: 110px 0 110px;
+
+	.wpcf7-form{
+		max-width: 475px;
+		font-weight: normal;
+		font-size: 14px;
+		color: #FFFFFF;
+		margin: 0 auto 30px;
+		transition: all .5s;
+
+		input,textarea{
+			margin-bottom: 24px;
+			&:focus{
+				outline: none;
+				box-shadow: none;
+			}
+		}
+		.wpcf7-submit{
+		    width: 100%;
+		    font-weight: bold;
+		    font-size: 17.5px;
+		    padding: 15px 10px;
+		    margin-bottom: 0;
+		    color: #fff;
+		    border-color: transparent;
+		    background: #06A95B;
+		    border-radius: 5px;
+		}
+	}
+
+
+	@media (max-width: 991px){
+		padding: 80px 0;
+	}
+	@media (max-width: 575px){
+		padding: 30px 0;
+	}
+}
